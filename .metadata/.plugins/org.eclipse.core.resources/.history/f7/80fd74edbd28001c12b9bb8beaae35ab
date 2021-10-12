@@ -1,0 +1,23 @@
+package hierarquia.Loja;
+
+public class Livro extends Produto{
+	private String autor;
+	
+	public Livro(int codigoDeBarras, String nome, double preco, String autor) {
+		super(codigoDeBarras, nome, preco);
+		
+		this.autor = autor;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+	
+	public String toString() {
+		return "Livro\n"+"Nome do livro: " + getNome() + "\nPreço do livro: " + getPreco() + "\nAutor do livro: " + getAutor();
+	}	
+}

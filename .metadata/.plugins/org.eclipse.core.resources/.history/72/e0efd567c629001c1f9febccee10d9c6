@@ -1,0 +1,104 @@
+package TestandoJFrame;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import javax.swing.JTextPane;
+import javax.swing.JPasswordField;
+import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class UsandoJF extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField nomeUsuario;
+	private JPasswordField senhaUsuario;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					UsandoJF frame = new UsandoJF();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public UsandoJF() {
+		setFont(new Font("Bahnschrift", Font.PLAIN, 12));
+		setForeground(Color.BLACK);
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\david\\Downloads\\95844235_2684387128512109_1970007013689655296_n.png"));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 249, 219);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.DARK_GRAY);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Usu\u00E1rio");
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(28, 26, 69, 22);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblSenha = new JLabel("Senha");
+		lblSenha.setForeground(Color.WHITE);
+		lblSenha.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSenha.setBounds(28, 82, 69, 22);
+		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(lblSenha);
+		
+		nomeUsuario = new JTextField();
+		nomeUsuario.setBounds(107, 28, 86, 24);
+		contentPane.add(nomeUsuario);
+		nomeUsuario.setColumns(10);
+		
+		senhaUsuario = new JPasswordField();
+		senhaUsuario.setBounds(107, 85, 86, 22);
+		contentPane.add(senhaUsuario);
+		
+		
+		JButton btnNewButton = new JButton("Login");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(nomeUsuario.getText().equals("") && (new String(senhaUsuario.getPassword()).equals(""))) {
+					System.out.println("Por favor, informe o nome do seu usário e sua senha");
+				} else if(nomeUsuario.getText().equals("")) {
+					System.out.println("Informe o nome do seu usuário.");
+				} else if((new String(senhaUsuario.getPassword()).equals(""))) {
+					System.out.println("Informe a senha do seu usuário.");
+				} else if(nomeUsuario.getText().equals("david.masin") && (new String(senhaUsuario.getPassword()).equals("qwe123"))) {
+					System.out.println("Login realizado com sucesso. Seja bem-vindo(a)!");
+				} else {
+					System.out.println("Credenciais inválidas");
+				}
+				
+			}
+		});
+		
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton.setBounds(65, 139, 89, 23);
+		contentPane.add(btnNewButton);
+	}
+}

@@ -1,0 +1,20 @@
+package IntrodJavaFicEmCasa;
+
+public class Circle {
+
+	public static void main(String[] args) {
+		double raio, comp_circulo, area_circulo;
+		Scanner leitor = new Scanner(System.in);
+		
+		System.out.print("Informe o valor do RAIO do círculo em cm: ");
+		raio = leitor.nextFloat();
+		
+		comp_circulo = 2 * Math.PI * raio;
+		area_circulo = raio * Math.PI;
+		
+		System.out.printf("O comprimento do círculo vale %.2fcm\n", comp_circulo);
+		System.out.printf("A área do círculo vale %.2fcm²\n", area_circulo);
+	}
+	
+	
+}

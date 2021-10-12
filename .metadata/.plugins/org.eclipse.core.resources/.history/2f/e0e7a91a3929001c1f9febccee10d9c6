@@ -1,0 +1,31 @@
+package hierarquia.Loja;
+
+public class PenDrive extends Produto{
+	private int memoria;
+	
+	public PenDrive(int codigoDeBarras, String nome, double preco, int memoria) {
+		super(codigoDeBarras, nome, preco);
+		
+		this.memoria = memoria;
+	}
+
+	public int getMemoria() {
+		return memoria;
+	}
+
+	public void setMemoria(int memoria) {
+		this.memoria = memoria;
+	}
+	
+	public String toString() {
+		return "Pendrive\n" + "Marca do pendrive: " + getNome() + "Preço do pendrive: R$" + getPreco() + "\nMemória do pendrive: " + memoria + "GB";
+	}
+
+	@Override
+	public int compareTo(Produto o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+}

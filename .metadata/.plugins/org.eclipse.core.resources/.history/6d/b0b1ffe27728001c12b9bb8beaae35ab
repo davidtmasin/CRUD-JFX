@@ -1,0 +1,23 @@
+package Banco.OO;
+
+public class TestaAgencia {
+
+	public static void main(String[] args) {
+
+		ContaCorrente cc1 = new ContaCorrente("172344-99", "443", 5000);
+		ContaCorrente cc2 = new ContaCorrente("172354-99", "443", 3500);
+		
+		cc1.realizarTransferencia(cc2, 500);
+		cc1.realizarDeposito(4500);
+		cc1.realizarSaque(6000);
+		
+		cc1.mostrarSaldo();
+		System.out.println("--------------------");
+		cc2.mostrarSaldo();
+		
+		
+
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package Banco.OO;
+
+public class ContaPoupanca extends Conta{
+
+	private String variacao;
+	
+	public ContaPoupanca(String numConta, String agencia, double saldo, String variacao) {
+		super(numConta, agencia, saldo);
+		
+		this.variacao = variacao;
+	}
+}

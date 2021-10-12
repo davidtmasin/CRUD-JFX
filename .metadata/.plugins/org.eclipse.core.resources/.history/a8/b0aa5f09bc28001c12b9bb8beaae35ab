@@ -1,0 +1,8 @@
+package hierarquia.Loja;
+
+public abstract class Produto {
+	
+	private String nome;
+	private double preco;
+	
+}

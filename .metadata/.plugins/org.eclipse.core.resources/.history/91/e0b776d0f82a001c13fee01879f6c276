@@ -1,0 +1,20 @@
+package javaOO.LambdasStreams;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class UsingFunctionalProgramming {
+	
+	public static void main(String[] args) {
+	
+		List<String> students = Arrays.asList("David", "Karine", "Mariana", "Sophia", "Carol","Raquel", "Maria", "Sarah", "Bernardo");
+
+		//Exibindo apenas 03 resultados
+		students.stream().limit(3).forEach(System.out::println);	
+		
+		//
+		students.stream().filter(student -> student.contains("a")).forEach(System.out::println);
+		
+	}
+
+}

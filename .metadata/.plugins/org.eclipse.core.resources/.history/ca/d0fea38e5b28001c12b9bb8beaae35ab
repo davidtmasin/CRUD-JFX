@@ -1,0 +1,28 @@
+package IntrodJavaFicEmCasa;
+
+public class SomatorioFaixaNumeros {
+
+	public static void main(String[] args) {
+    	int somaNum = 0;
+    	int numInicial;
+    	int numFinal;
+    	Scanner leitor = new Scanner(System.in);
+    	System.out.println("Este programa soma todos os algarismos dentro de uma faixa de números.");
+    	
+    	System.out.print("Digite o primeiro número da faixa: ");
+    	numInicial = leitor.nextInt();
+    	
+    	System.out.print("Digite o último número da faixa: ");
+    	numFinal = leitor.nextInt();
+    	
+    	for(int num = numInicial; num<=numFinal;num++){
+    	    
+    	    somaNum = somaNum + num;
+    	    System.out.println("Soma "+num+": "+somaNum);
+    	    
+    	}
+    	
+    	System.out.println("O somatório de " + numInicial + " a " + numFinal + " é igual a "+somaNum+".");
+	}
+	
+}

@@ -1,0 +1,81 @@
+package javaOO.LambdasStreams;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class LambdaExpression {
+
+	public static void main(String[] args) {
+		//Lambda Expression é um recurso do Java 8 que implementa
+		//a programação funcional
+		//Presente nas funções de alta ordem
+		
+		List<String> lista = new ArrayList<>();
+		
+		lista.add("Teca");
+		lista.add("Tereza");
+		lista.add("Calada");
+		lista.add("Nenhuma");
+		lista.add("Jubileu");
+		
+		//System.out.println(lista.contains("Jubileu"));
+		//System.out.println(lista.get(3));
+		//System.out.println(lista.isEmpty());
+		//System.out.println(lista.indexOf("Calada"));
+		
+		/*
+		for(String nome : lista) {
+			System.out.println(nome);
+		}
+		
+		
+		//Usando iterator para percorrer uma lista
+		System.out.println("-------------------------------------------------------------------------");
+		Iterator<String> iterator = lista.iterator();
+		System.out.println("Percorrendo e imprimindo todos os elementos de uma lista usando Iterator");
+		System.out.println("-------------------------------------------------------------------------");
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		System.out.println("-------------------------------------------------------------------------");
+
+		*/
+		
+		//stream pega uma lista e retorna uma sequência de dados
+		//.filter
+		//.map -> recebe uma função, vai mapar toda uma coleção e fará a ação de acordo com a função que recebeu
+		//.reduce
+						//item -> função
+		lista.stream()
+		
+		//Serve para pular posições da stream
+		//.skip(2)
+		//.limit(2) //mostra próximos, limitado ao valor, no exemplo, até 02
+		.filter(pessoa -> pessoa.equals("")) //Predicate > usa uma função com teste lógico que retorna um Optional
+		
+		//Percorre toda a stream, recebe o parâmetro, cada item do array, 
+		//e concatena com o texto entre as aspas, ao final jogo para o forEach que tem o consumer
+		.map(pessoa -> "Aluno(a): " + pessoa) 
+		
+		
+		//Vai percorrer a lista e imprimir todos os elementos presentes nela
+		//.forEach(pessoa -> System.out.println(pessoa)); //forEach recebe um consumer (o consumer recebe um parâmetro e retorna nada)
+		
+		//Forma mais resumida do forEach
+		.forEach(System.out::println); //Chamou a classe System.out e ela já entende que tem que imprimir cada ocorrência da stream
+		
+		System.out.println("-------------------------------------------------------------------------");
+
+		List<Integer> numeros = Arrays.asList(1,2,3,4,5,6);
+		
+		numeros.stream()
+			.filter(number -> number%2==0)		
+		//.map(number -> Math.pow(number, 2))
+			.forEach(System.out::println);
+		
+		
+		
+	}
+
+}

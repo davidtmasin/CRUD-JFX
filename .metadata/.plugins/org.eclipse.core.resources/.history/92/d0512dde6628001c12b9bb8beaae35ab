@@ -1,0 +1,13 @@
+package Banco.OO;
+
+public class Conta {
+	
+	private String numConta;
+	private String agencia;
+	private double saldo;
+
+	public Conta(String numConta, String agencia, double saldo) {
+		
+	}
+
+}

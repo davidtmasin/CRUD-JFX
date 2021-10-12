@@ -1,0 +1,16 @@
+package RevisandoJava.OO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Aluno extends Pessoa{
+	
+	private String curso;
+	private List<Integer> notas = new ArrayList<>();
+	
+	public Aluno(long id, String nome, String curso) {
+		super(id, nome);
+		this.curso = curso;
+	}
+
+}

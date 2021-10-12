@@ -1,0 +1,28 @@
+package Colecoes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UsingCollections {
+
+	public static void main(String[] args) {
+
+		List<People> room = new ArrayList<>();	
+		Pessoa p1 = new Pessoa("David", 22);
+		Pessoa p2 = new Pessoa("Teca", 14);
+		Pessoa p3 = new Pessoa("Tereza", 15);
+		Pessoa p4 = new Pessoa("Calada", 16);
+
+		
+		room.add(p1);
+		rom.add(p2);
+		rom.add(p3);
+		rom.add(p4);
+
+		for(People people : room) {
+			System.out.println(people.toString());
+		}
+			
+	}
+
+}

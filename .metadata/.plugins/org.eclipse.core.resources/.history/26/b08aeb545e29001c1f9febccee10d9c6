@@ -1,0 +1,11 @@
+ package RevisandoJava.OO;
+
+public class TesteInstituicao {
+
+	public static void main(String[] args) {
+		
+		Pessoa.mostraPopulacao();
+		
+	}
+
+}

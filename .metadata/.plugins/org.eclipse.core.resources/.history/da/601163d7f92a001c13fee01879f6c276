@@ -1,0 +1,34 @@
+package javaOO.LambdasStreams;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class UsingFunctionalProgramming {
+	
+	public static void main(String[] args) {
+	
+		List<String> students = Arrays.asList("David", "José", "Jubileu", 
+											  "Coelho", "Karine", "Mariana", 
+											  "Sophia", "Carol","Raquel", "Maria", 
+											  "Sarah", "Bernardo");
+		
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("Exibindo apenas 03 resultados da lista");
+		System.out.println("--------------------------------------------------------------");
+		//Exibindo apenas 03 resultados da lista
+		students.stream().limit(3).forEach(System.out::println);
+		
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("Exibindo apenas os nomes, da lista, que têm a letra 'a'");
+		System.out.println("--------------------------------------------------------------");
+		//Exibindo apenas os nomes, da lista, que têm a letra "a"
+		students.stream().filter(student -> student.contains("a")).forEach(System.out::println);
+
+		System.out.println("--------------------------------------------------------------");
+
+		//
+		
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CRUD-JFX&apos; to &apos;CRUDJFX&apos;" description="Rename resource &apos;CRUD-JFX&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/CRUD-JFX" name="CRUDJFX" stamp="1633994382918" updateReferences="true"/>
+</session>

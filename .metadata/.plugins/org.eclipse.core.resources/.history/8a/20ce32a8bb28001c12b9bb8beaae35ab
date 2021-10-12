@@ -1,0 +1,33 @@
+package hierarquia.Loja;
+
+public class PenDrive {
+	private String nome;
+	private double preco;
+	private int memoria;
+	
+	public PenDrive(String nome, double preco, int memoria) {
+		
+		this.memoria = memoria;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getMemoria() {
+		return memoria;
+	}
+
+	public void setMemoria(int memoria) {
+		this.memoria = memoria;
+	}
+	
+	
+	public String toString() {
+		return "PenDrive\n" + this.nome + " - " + this.memoria+"GB";
+	}
+}
