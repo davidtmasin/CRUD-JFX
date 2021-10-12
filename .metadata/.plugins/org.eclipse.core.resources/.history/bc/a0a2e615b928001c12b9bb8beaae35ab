@@ -1,7 +1,0 @@
-package hierarquia.Loja;
-
-public class Livro {
-	private String nome;
-	private double preco;
-	private String autor;
-}

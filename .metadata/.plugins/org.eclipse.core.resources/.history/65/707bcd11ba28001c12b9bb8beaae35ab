@@ -1,9 +1,0 @@
-package hierarquia.Loja;
-
-public class Loja {
-
-	private Livro livro;
-	private PenDrive penDrive;
-	
-	public Loja() {};
-}

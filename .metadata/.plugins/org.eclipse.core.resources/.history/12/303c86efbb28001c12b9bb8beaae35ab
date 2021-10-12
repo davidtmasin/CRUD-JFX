@@ -1,6 +1,0 @@
-package hierarquia.Loja;
-
-public abstract class Produto {
-	
-	
-}

@@ -1,9 +1,0 @@
-package OO;
-
-public class FuncionarioOperacional extends Funcionario{
-
-	public FuncionarioOperacional(long matricula, String nome, String cargo, double salario) {
-		
-	}
-	
-}

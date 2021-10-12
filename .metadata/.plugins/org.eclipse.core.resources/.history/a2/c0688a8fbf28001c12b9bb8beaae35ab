@@ -1,6 +1,0 @@
-package hierarquia.Loja;
-
-public class TestaLoja {
-
-	Livro livro = new Livro(666, "A lenda do chupa-cabra", 25.85, "Jubileu da Silva Xablau");
-}
