@@ -4,17 +4,17 @@ public class Contato {
 
 	private long id;
 	private String nome;
-	private String sobrenome;
 	private int idade;
+	private String endereco;
 	private String telefone;
 	
 	public Contato() {}
 	
-	public Contato(long id, String nome, String sobrenome, int idade, String telefone) {
+	public Contato(long id, String nome, int idade,String endereco, String telefone) {
 		this.id = id;
 		this.nome = nome;
-		this.sobrenome = sobrenome;
 		this.idade = idade;
+		this.endereco = endereco;
 		this.telefone = telefone;
 	}
 
@@ -34,20 +34,20 @@ public class Contato {
 		this.nome = nome;
 	}
 
-	public String getSobrenome() {
-		return sobrenome;
-	}
-
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
-	}
-
 	public int getIdade() {
 		return idade;
 	}
 
 	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 	public String getTelefone() {
@@ -60,7 +60,7 @@ public class Contato {
 
 	@Override
 	public String toString() {
-		return "Contato [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", idade=" + idade + ", telefone="
+		return "Contato [id=" + id + ", nome=" + nome + ", idade=" + idade + ", endereco=" + endereco + ", telefone="
 				+ telefone + "]";
 	}
 	

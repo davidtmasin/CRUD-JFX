@@ -18,6 +18,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="mysql-connector-java-8.0.21.jar">
 		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/www/eclipse-workspace/Desenvolvimento%20Java/CRUDJFX/"/>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>

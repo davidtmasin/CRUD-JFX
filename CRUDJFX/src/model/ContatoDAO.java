@@ -9,10 +9,10 @@ import java.util.List;
 
 public class ContatoDAO {
 /*
- * DAO
- * DATA ACCESS OBJECT
+ * DAO: DATA ACCESS OBJECT
  * Objeto de acesso aos dados
- * O contatoDAO fará a ligação entre o objeto contato e a tabela agenda dentro do BD
+ * O contatoDAO fará a ligação entre o objeto contato e a tabela contato dentro do BD
+ * 
  */
 	private Connection con;
 
@@ -23,15 +23,15 @@ public class ContatoDAO {
 	
 	public void salvarDAO(Contato contato) {
 		//JPQL => Linguagem Java para criar query SQL
-		String sql ="insert into agenda(nome, sobrenome, idade, telefone) values(?, ?, ?, ?)";
+		String sql ="insert into contato(nome, idade, endereco, telefone) values(?, ?, ?, ?)";
 		
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 	
 			//Informa os valores a serem atribuídos aos campos da table agenda no BD
-			ps.setString(1, contato.getNome());
-			ps.setString(2, contato.getSobrenome());
-			ps.setInt(3,contato.getIdade());
+			ps.setString(1, contato.getNome());			
+			ps.setInt(2,contato.getIdade());
+			ps.setString(3, contato.getEndereco());
 			ps.setString(4, contato.getTelefone());
 			
 			ps.execute(); //vai enviar o PreparedStatement para o BD
@@ -47,14 +47,14 @@ public class ContatoDAO {
 	
 	public void editarDAO(Contato contato) {
 		
-		String sql = "update agenda set nome=?, sobrenome=?, idade=?, telefone=? where id=?";					       
+		String sql = "update contato set nome=?, idade=?, endereco=?, telefone=? where id=?";					       
 	
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 	
-			ps.setString(1, contato.getNome());
-			ps.setString(2, contato.getSobrenome());
-			ps.setInt(3,contato.getIdade());
+			ps.setString(1, contato.getNome());			
+			ps.setInt(2,contato.getIdade());
+			ps.setString(3, contato.getEndereco());
 			ps.setString(4, contato.getTelefone());
 			ps.setLong(5, contato.getId());
 			
@@ -71,7 +71,7 @@ public class ContatoDAO {
 	
 	public void deletarDAO(Long id) {
 		
-		String sql ="delete from agenda where id=?";
+		String sql ="delete from contato where id=?";
 		
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -93,7 +93,7 @@ public class ContatoDAO {
 		
 		try {
 
-			String sql = "select * from agenda";
+			String sql = "select * from contato";
 			
 			PreparedStatement ps = con.prepareStatement(sql);
 
@@ -105,8 +105,8 @@ public class ContatoDAO {
 				
 				contato.setId(rs.getLong("id"));
 				contato.setNome(rs.getString("nome"));
-				contato.setSobrenome(rs.getString("sobrenome"));
 				contato.setIdade(rs.getInt("idade"));
+				contato.setEndereco(rs.getString("endereco"));
 				contato.setTelefone(rs.getString("telefone"));
 				
 				contatos.add(contato);

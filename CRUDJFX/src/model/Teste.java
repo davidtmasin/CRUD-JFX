@@ -16,29 +16,29 @@ public class Teste {
 		ps.close();
 		System.out.println("OK.");
 */
-		ContatoDAO dao = new ContatoDAO();
-		Contato contato1 = new Contato();
-		
+		//ContatoDAO dao = new ContatoDAO();
+		//Contato contato1 = new Contato();
+		/*
 		contato1.setId(5);
 		contato1.setNome("Custodia");
 		contato1.setSobrenome("Calcida");
 		contato1.setIdade(65);
 		contato1.setTelefone("(85) 9 8902-8922");
-		
+		*/
 		//dao.salvarDAO(contato1); //chama o DAO para receber o objeto e salvá-lo
 		//dao.editarDAO(contato1);
 		
-		List<Contato> contatos = dao.consultarDAO();
+		//List<Contato> contatos = dao.consultarDAO();
 		
 		//Percorre toda a lista e retorna o "Nome - Idade"
-		contatos.stream().forEach(registro -> System.out.println(registro.getNome() + " - " + registro.getIdade()));
+		//contatos.stream().forEach(registro -> System.out.println(registro.getNome() + " - " + registro.getIdade()));
 		
-		System.out.println("----------------------------------------------");
+		//System.out.println("----------------------------------------------");
 		//Ou
-		System.out.println("----------------------------------------------");
+		//System.out.println("----------------------------------------------");
 		
 		//Percorre toda a lista e retorna a informação do método toString
-		contatos.stream().forEach(System.out::println);
+		//contatos.stream().forEach(System.out::println);
 		
 	}
 
